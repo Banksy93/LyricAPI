@@ -36,7 +36,25 @@ namespace MusicBrainz.Service
 
 		public IEnumerable<string> GetSongsByReleases(string artistId, IList<string> releases)
 		{
-			throw new System.NotImplementedException();
+			if (string.IsNullOrEmpty(artistId) || !releases.Any())
+				return new List<string>();
+
+			var songs = new List<string>();
+
+			foreach (var release in releases)
+			{
+				var releaseSongs = Search.Recording(arid: artistId, release: release);
+
+				if (releaseSongs?.Data == null || !releaseSongs.Data.Any())
+					continue;
+
+				songs.AddRange(releaseSongs.Data.Select(s => s.Title));
+			}
+
+			// Filter out any duplicates or instrumental songs
+			return songs.Where(s => !s.ToLowerInvariant().Contains("instrumental"))
+				.Distinct()
+				.ToList();
 		}
 	}
 }
