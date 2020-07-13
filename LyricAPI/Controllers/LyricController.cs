@@ -8,7 +8,7 @@ namespace LyricAPI.Controllers
 	[ApiController]
 	public class LyricController : ControllerBase
 	{
-		private ILyricApiLogic _lyricApiLogic;
+		private readonly ILyricApiLogic _lyricApiLogic;
 
 		public LyricController(ILyricApiLogic lyricApiLogic)
 		{
