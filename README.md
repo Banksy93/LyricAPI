@@ -5,7 +5,7 @@ A simple .NET Core web application which can calculate the average number of lyr
 # To Run
 * Clone the repository using git clone https://github.com/Banksy93/LyricAPI.git.
 * Open in Visual Studio and set the startup project as Lyric.Web
-* Hit F5 (or ctrl + f5) to run the application.
+* Build the solution then hit F5 (or ctrl + f5) to run the application.
 * Enter and artists name and hit submit (Note: For speed, use an artist who only has a small number of releases. For example, Lewis Capaldi or Billie Eilish. It will take a long time to process bands such as Metallica and Queen, more on that further down).
 * Upon completion of the request, you will get the average lyrics in the artists songs, the maximum number of lyrics in a song, and the minimum number of lyrics in a song.
 * To run tests, click the Test toolbar and select Run All Tests. (Or if using Resharper in VS2019, Extensions -> Resharper -> Unit Tests -> Run All Tests From Solution)
