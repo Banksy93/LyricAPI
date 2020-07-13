@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using MusicBrainz.Data;
 using MusicBrainz.Service.Interfaces;
 
@@ -18,6 +20,11 @@ namespace MusicBrainz.Service
 
 			// Highest scored artist is the first one
 			return artistData.Data.First();
+		}
+
+		public IEnumerable<string> GetArtistReleases(string artistId, string primaryType)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
