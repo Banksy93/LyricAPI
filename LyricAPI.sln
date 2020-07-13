@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{1CD2283E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{AE42F368-CD01-4297-AAFF-8B8A44FCB9D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricApi.Tests", "LyricApi.Tests\LyricApi.Tests.csproj", "{1470029C-A50D-4B70-B76D-C97CADA2839C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricApi.Tests", "LyricApi.Tests\LyricApi.Tests.csproj", "{1470029C-A50D-4B70-B76D-C97CADA2839C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyrics.Service", "LyricService\Lyrics.Service.csproj", "{30073690-B198-4443-B7D2-6B4D1480E4F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyrics.Service", "LyricService\Lyrics.Service.csproj", "{30073690-B198-4443-B7D2-6B4D1480E4F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicBrainz.Service", "MusicBrainzService\MusicBrainz.Service.csproj", "{794CC616-BDE1-46F1-AE45-DB9F80AD2508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicBrainz.Service", "MusicBrainzService\MusicBrainz.Service.csproj", "{794CC616-BDE1-46F1-AE45-DB9F80AD2508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyric.API.Logic", "Lyric.API.Logic\Lyric.API.Logic.csproj", "{8CB140FA-2AB9-4730-96D5-FB9177AA1455}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.API.Logic", "Lyric.API.Logic\Lyric.API.Logic.csproj", "{8CB140FA-2AB9-4730-96D5-FB9177AA1455}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyric.API.Models", "Lyric.API.Models\Lyric.API.Models.csproj", "{216A7E9B-0E42-4B98-A57A-08F45A97D778}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8CB140FA-2AB9-4730-96D5-FB9177AA1455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CB140FA-2AB9-4730-96D5-FB9177AA1455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CB140FA-2AB9-4730-96D5-FB9177AA1455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216A7E9B-0E42-4B98-A57A-08F45A97D778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216A7E9B-0E42-4B98-A57A-08F45A97D778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216A7E9B-0E42-4B98-A57A-08F45A97D778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216A7E9B-0E42-4B98-A57A-08F45A97D778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{30073690-B198-4443-B7D2-6B4D1480E4F8} = {D35FDCD4-ADFA-4C5C-A823-1428549D9B02}
 		{794CC616-BDE1-46F1-AE45-DB9F80AD2508} = {D35FDCD4-ADFA-4C5C-A823-1428549D9B02}
 		{8CB140FA-2AB9-4730-96D5-FB9177AA1455} = {1CD2283E-448E-4769-9D10-F351C9E8C75D}
+		{216A7E9B-0E42-4B98-A57A-08F45A97D778} = {AE42F368-CD01-4297-AAFF-8B8A44FCB9D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCA1DD2C-9BF3-4F2C-99C9-8CD5EEBDFC4E}

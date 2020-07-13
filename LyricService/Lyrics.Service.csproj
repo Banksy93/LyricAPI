@@ -8,4 +8,8 @@
     <PackageReference Include="RestSharp" Version="106.11.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Lyric.API.Models\Lyric.API.Models.csproj" />
+  </ItemGroup>
+
 </Project>
