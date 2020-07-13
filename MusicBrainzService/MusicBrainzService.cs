@@ -33,5 +33,10 @@ namespace MusicBrainz.Service
 
 			return releases.Data.Select(r => r.Title).Distinct();
 		}
+
+		public IEnumerable<string> GetSongsByReleases(string artistId, IList<string> releases)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }

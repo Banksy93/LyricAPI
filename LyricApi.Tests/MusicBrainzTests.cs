@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using MusicBrainz.Service;
 using MusicBrainz.Service.Interfaces;
 using NUnit.Framework;
@@ -73,6 +74,36 @@ namespace LyricApi.Tests
 		{
 			// Act
 			var data = _musicBrainzService.GetArtistReleases("0383dadf-2a4e-4d10-a46a-e9e041da8eb3", "album");
+
+			// Assert
+			Assert.IsTrue(data.Any());
+		}
+
+		[Test]
+		public void GetSongsByReleases_ReturnsEmptyList_IfArtistIdIsNull()
+		{
+			// Act
+			var data = _musicBrainzService.GetSongsByReleases(null, new List<string> {"Every Weekend", "For The Masses"});
+
+			// Assert
+			Assert.IsEmpty(data);
+		}
+
+		[Test]
+		public void GetSongsByReleases_ReturnsEmptyList_IfReleasesIsEmpty()
+		{
+			// Act
+			var data = _musicBrainzService.GetSongsByReleases("8c9200b8-8e05-41d5-836e-44a37905560e", new List<string>());
+
+			// Assert
+			Assert.IsEmpty(data);
+		}
+
+		[Test]
+		public void GetSongsByReleases_ReturnsListOfSongs()
+		{
+			// Act
+			var data = _musicBrainzService.GetSongsByReleases("8c9200b8-8e05-41d5-836e-44a37905560e", new List<string> { "Every Weekend", "For The Masses" });
 
 			// Assert
 			Assert.IsTrue(data.Any());

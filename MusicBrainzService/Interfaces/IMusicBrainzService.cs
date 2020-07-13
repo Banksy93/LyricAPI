@@ -19,5 +19,13 @@ namespace MusicBrainz.Service.Interfaces
 		/// <param name="primaryType">Type of release, e.g. album</param>
 		/// <returns></returns>
 		IEnumerable<string> GetArtistReleases(string artistId, string primaryType);
+
+		/// <summary>
+		/// Get a list of songs from releases by an artist
+		/// </summary>
+		/// <param name="artistId"></param>
+		/// <param name="releases">A list of artist releases</param>
+		/// <returns></returns>
+		IEnumerable<string> GetSongsByReleases(string artistId, IList<string> releases);
 	}
 }
