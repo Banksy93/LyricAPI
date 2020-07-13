@@ -127,6 +127,8 @@ namespace LyricApi.Tests
 				.ReturnsAsync(new SongLyrics {Lyrics = "Some lyrics to a song."});
 			_lyricCalculator.Setup(lc => lc.GetLyricCount(It.IsAny<string>()))
 				.Returns(57);
+			_lyricCalculator.Setup(lc => lc.GetLyricCountAverageDetails(It.IsAny<List<int>>()))
+				.Returns(averageDetails);
 
 			// Act
 			var result = await _lyricApiLogic.GetAverageLyricCount("Hadouken");
