@@ -12,9 +12,10 @@ namespace Lyric.Web.Controllers
 		private readonly ILogger<HomeController> _logger;
 		private readonly ILyricApiLogic _lyricApiLogic;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, ILyricApiLogic lyricApiLogic)
 		{
 			_logger = logger;
+			_lyricApiLogic = lyricApiLogic;
 		}
 
 		public IActionResult Index()
