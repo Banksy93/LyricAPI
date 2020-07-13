@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Lyric.API.Models\Lyric.API.Models.csproj" />
+    <ProjectReference Include="..\LyricService\Lyrics.Service.csproj" />
+    <ProjectReference Include="..\MusicBrainzService\MusicBrainz.Service.csproj" />
+  </ItemGroup>
+
 </Project>
