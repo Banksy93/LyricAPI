@@ -19,7 +19,7 @@ namespace Lyric.API.Logic
 			_lyricCalculator = lyricCalculator;
 		}
 
-		public Task<ArtistAverage> GetAverageLyricCount(string artist)
+		public async Task<ArtistAverage> GetAverageLyricCount(string artist)
 		{
 			throw new System.NotImplementedException();
 		}
