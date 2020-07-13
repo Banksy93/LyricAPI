@@ -14,5 +14,35 @@ namespace LyricApi.Tests
 		{
 			_musicBrainzService = new MusicBrainzService();
 		}
+
+		[Test]
+		public void GetArtistData_ReturnsNull_NoArtistPassedIn()
+		{
+			// Act
+			var data = _musicBrainzService.GetArtistData(null);
+
+			// Assert
+			Assert.IsNull(data);
+		}
+
+		[Test]
+		public void GetArtistData_ReturnsNull_ArtistNotFound()
+		{
+			// Act
+			var data = _musicBrainzService.GetArtistData("lskjfskldjfoisejfid");
+
+			// Assert
+			Assert.IsNull(data);
+		}
+
+		[Test]
+		public void GetArtistData_Returns_ArtistData()
+		{
+			// Act
+			var data = _musicBrainzService.GetArtistData("Queen");
+
+			// Assert
+			Assert.AreEqual("Queen", data.Name);
+		}
 	}
 }
