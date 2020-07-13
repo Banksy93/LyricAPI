@@ -33,7 +33,8 @@ namespace LyricAPI
 
 			services.AddSingleton<ILyricService, LyricService>()
 				.AddSingleton<IMusicBrainzService, MusicBrainzService>()
-				.AddSingleton<ILyricApiLogic, LyricApiLogic>();
+				.AddSingleton<ILyricApiLogic, LyricApiLogic>()
+				.AddSingleton<ILyricCalculator, LyricCalculator>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
