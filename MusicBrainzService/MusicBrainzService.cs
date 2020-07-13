@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using MusicBrainz.Data;
 using MusicBrainz.Service.Interfaces;
@@ -24,7 +23,15 @@ namespace MusicBrainz.Service
 
 		public IEnumerable<string> GetArtistReleases(string artistId, string primaryType)
 		{
-			throw new NotImplementedException();
+			if (string.IsNullOrEmpty(artistId) || string.IsNullOrEmpty(primaryType))
+				return new List<string>();
+
+			var releases = Search.Release(arid: artistId, primarytype: primaryType);
+
+			if (releases.Data == null || !releases.Data.Any())
+				return new List<string>();
+
+			return releases.Data.Select(r => r.Title).Distinct();
 		}
 	}
 }
