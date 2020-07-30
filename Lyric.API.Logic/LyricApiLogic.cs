@@ -30,7 +30,9 @@ namespace Lyric.API.Logic
 			if (string.IsNullOrEmpty(artist))
 				return null;
 
-			var existingData = _lyricDataReader.GetArtistAverage(artist);
+			var existingData = await _lyricDataReader.GetArtistAverage(artist);
+			if (!string.IsNullOrEmpty(existingData.ArtistId))
+				return existingData;
 
 			var model = new ArtistAverage{ ArtistName = artist };
 

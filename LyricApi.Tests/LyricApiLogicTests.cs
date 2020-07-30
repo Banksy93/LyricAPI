@@ -55,6 +55,8 @@ namespace LyricApi.Tests
 				Id = "8c9200b8-8e05-41d5-836e-44a37905560e"
 			};
 
+			_lyricDataReader.Setup(ldr => ldr.GetArtistAverage(It.IsAny<string>()))
+				.ReturnsAsync(new ArtistAverage());
 			_musicBrainzService.Setup(mb => mb.GetArtistData(It.IsAny<string>()))
 				.Returns(artist);
 			_musicBrainzService.Setup(mb => mb.GetArtistReleases(It.IsAny<string>(), It.IsAny<string>()))
@@ -79,6 +81,8 @@ namespace LyricApi.Tests
 				Id = "8c9200b8-8e05-41d5-836e-44a37905560e"
 			};
 
+			_lyricDataReader.Setup(ldr => ldr.GetArtistAverage(It.IsAny<string>()))
+				.ReturnsAsync(new ArtistAverage());
 			_musicBrainzService.Setup(mb => mb.GetArtistData(It.IsAny<string>()))
 				.Returns(artist);
 			_musicBrainzService.Setup(mb => mb.GetArtistReleases(It.IsAny<string>(), It.IsAny<string>()))
