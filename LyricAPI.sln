@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.API.Logic", "Lyric.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.API.Models", "Lyric.API.Models\Lyric.API.Models.csproj", "{216A7E9B-0E42-4B98-A57A-08F45A97D778}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyric.Web", "Lyric.Web\Lyric.Web.csproj", "{5F63B77C-BD8A-41E9-A248-5BA30F6330D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.Web", "Lyric.Web\Lyric.Web.csproj", "{5F63B77C-BD8A-41E9-A248-5BA30F6330D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.Web.Angular", "Lyric.Web.Angular\Lyric.Web.Angular.csproj", "{89B3F229-0DA0-42ED-B36D-99883A1D9C49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5F63B77C-BD8A-41E9-A248-5BA30F6330D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F63B77C-BD8A-41E9-A248-5BA30F6330D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F63B77C-BD8A-41E9-A248-5BA30F6330D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
