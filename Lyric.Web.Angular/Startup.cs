@@ -1,5 +1,7 @@
 using Lyric.API.Logic;
 using Lyric.API.Logic.Interfaces;
+using Lyric.Data;
+using Lyric.Data.Interfaces;
 using Lyrics.Service;
 using Lyrics.Service.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -35,7 +37,8 @@ namespace Lyric.Web.Angular
 			services.AddSingleton<ILyricApiLogic, LyricApiLogic>()
 				.AddSingleton<ILyricCalculator, LyricCalculator>()
 				.AddSingleton<IMusicBrainzService, MusicBrainzService>()
-				.AddSingleton<ILyricService, LyricService>();
+				.AddSingleton<ILyricService, LyricService>()
+				.AddSingleton<ILyricDataReader, LyricDataReader>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

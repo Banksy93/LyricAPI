@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Lyric.API.Logic\Lyric.API.Logic.csproj" />
+    <ProjectReference Include="..\Lyric.Data\Lyric.Data.csproj" />
     <ProjectReference Include="..\LyricService\Lyrics.Service.csproj" />
     <ProjectReference Include="..\MusicBrainzService\MusicBrainz.Service.csproj" />
   </ItemGroup>

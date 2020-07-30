@@ -5,10 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Lyric.API.Models\Lyric.API.Models.csproj" />
-    <ProjectReference Include="..\Lyric.Data\Lyric.Data.csproj" />
-    <ProjectReference Include="..\LyricService\Lyrics.Service.csproj" />
-    <ProjectReference Include="..\MusicBrainzService\MusicBrainz.Service.csproj" />
   </ItemGroup>
 
 </Project>

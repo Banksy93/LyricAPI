@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Lyric.API.Logic.Interfaces;
 using Lyric.API.Models;
+using Lyric.Data.Interfaces;
 using Lyrics.Service.Interfaces;
 using MusicBrainz.Service.Interfaces;
 
@@ -13,18 +14,23 @@ namespace Lyric.API.Logic
 		private readonly IMusicBrainzService _musicBrainzService;
 		private readonly ILyricService _lyricService;
 		private readonly ILyricCalculator _lyricCalculator;
+		private readonly ILyricDataReader _lyricDataReader;
 
-		public LyricApiLogic(IMusicBrainzService musicBrainzService, ILyricService lyricService, ILyricCalculator lyricCalculator)
+		public LyricApiLogic(IMusicBrainzService musicBrainzService, ILyricService lyricService, ILyricCalculator lyricCalculator,
+			ILyricDataReader lyricDataReader)
 		{
 			_musicBrainzService = musicBrainzService;
 			_lyricService = lyricService;
 			_lyricCalculator = lyricCalculator;
+			_lyricDataReader = lyricDataReader;
 		}
 
 		public async Task<ArtistAverage> GetAverageLyricCount(string artist)
 		{
 			if (string.IsNullOrEmpty(artist))
 				return null;
+
+			var existingData = _lyricDataReader.GetArtistAverage(artist);
 
 			var model = new ArtistAverage{ ArtistName = artist };
 

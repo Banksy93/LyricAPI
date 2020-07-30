@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.Web", "Lyric.Web\Lyri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lyric.Web.Angular", "Lyric.Web.Angular\Lyric.Web.Angular.csproj", "{89B3F229-0DA0-42ED-B36D-99883A1D9C49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{60DFB029-404C-466E-B4E7-DF0F45FA86C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyric.Data", "Lyric.Data\Lyric.Data.csproj", "{4287B34D-FC83-417A-8CCD-A555C92F0D21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B3F229-0DA0-42ED-B36D-99883A1D9C49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4287B34D-FC83-417A-8CCD-A555C92F0D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4287B34D-FC83-417A-8CCD-A555C92F0D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4287B34D-FC83-417A-8CCD-A555C92F0D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4287B34D-FC83-417A-8CCD-A555C92F0D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{794CC616-BDE1-46F1-AE45-DB9F80AD2508} = {D35FDCD4-ADFA-4C5C-A823-1428549D9B02}
 		{8CB140FA-2AB9-4730-96D5-FB9177AA1455} = {1CD2283E-448E-4769-9D10-F351C9E8C75D}
 		{216A7E9B-0E42-4B98-A57A-08F45A97D778} = {AE42F368-CD01-4297-AAFF-8B8A44FCB9D3}
+		{4287B34D-FC83-417A-8CCD-A555C92F0D21} = {60DFB029-404C-466E-B4E7-DF0F45FA86C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCA1DD2C-9BF3-4F2C-99C9-8CD5EEBDFC4E}
