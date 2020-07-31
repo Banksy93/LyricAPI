@@ -57,6 +57,10 @@ namespace Lyric.API.Logic
 
 			model.AverageDetails = _lyricCalculator.GetLyricCountAverageDetails(lyricCountList);
 
+			var addSuccess = await _lyricDataManager.AddArtistData(model);
+
+			//TODO: Log if failed
+
 			return model;
 		}
 
