@@ -38,8 +38,6 @@ export class HomeComponent {
 				this.artistAverage.averageDetails.average = response.averageDetails.average;
 				this.artistAverage.averageDetails.minCount = response.averageDetails.minCount;
 				this.artistAverage.averageDetails.maxCount = response.averageDetails.maxCount;
-
-				this.artist = '';
 		});
 	}
 }

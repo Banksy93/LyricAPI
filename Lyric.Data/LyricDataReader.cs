@@ -39,7 +39,15 @@ namespace Lyric.Data
 			{
 				var data = await sr.ReadToEndAsync();
 
-				return JsonConvert.DeserializeObject<IEnumerable<ArtistAverage>>(data);
+				try
+				{
+					return JsonConvert.DeserializeObject<IEnumerable<ArtistAverage>>(data);
+				}
+				catch (Exception ex)
+				{
+					//TODO: Log error
+					return null;
+				}
 			}
 		}
 	}

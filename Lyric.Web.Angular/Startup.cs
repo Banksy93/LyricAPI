@@ -38,7 +38,8 @@ namespace Lyric.Web.Angular
 				.AddSingleton<ILyricCalculator, LyricCalculator>()
 				.AddSingleton<IMusicBrainzService, MusicBrainzService>()
 				.AddSingleton<ILyricService, LyricService>()
-				.AddSingleton<ILyricDataReader, LyricDataReader>();
+				.AddSingleton<ILyricDataReader, LyricDataReader>()
+				.AddSingleton<ILyricDataManager, LyricDataManager>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
