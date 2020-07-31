@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Lyric.API.Logic;
 using Lyric.API.Logic.Interfaces;

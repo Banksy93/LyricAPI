@@ -13,22 +13,34 @@ namespace Lyric.Data
 	{
 		public async Task<ArtistAverage> GetArtistAverage(string artist)
 		{
-			using (var sr = new StreamReader(GetDataPath()))
-			{
-				var data = await sr.ReadToEndAsync();
+			var data = await GetArtistDataFromFile();
 
-				var deserializedData = JsonConvert.DeserializeObject<IEnumerable<ArtistAverage>>(data);
+			if (data == null)
+				return new ArtistAverage();
 
-				if (deserializedData == null)
-					return new ArtistAverage();
-
-				return deserializedData.First(d => d.ArtistName == artist) ?? new ArtistAverage();
-			}
+			return data.First(d => d.ArtistName == artist) ?? new ArtistAverage();
 		}
 
 		public string GetDataPath()
 		{
 			return Path.Combine(Environment.CurrentDirectory, "data.json");
+		}
+
+		public async Task<IEnumerable<ArtistAverage>> GetAllArtistsData()
+		{
+			var data = await GetArtistDataFromFile();
+
+			return data ?? new List<ArtistAverage>();
+		}
+
+		private async Task<IEnumerable<ArtistAverage>> GetArtistDataFromFile()
+		{
+			using (var sr = new StreamReader(GetDataPath()))
+			{
+				var data = await sr.ReadToEndAsync();
+
+				return JsonConvert.DeserializeObject<IEnumerable<ArtistAverage>>(data);
+			}
 		}
 	}
 }

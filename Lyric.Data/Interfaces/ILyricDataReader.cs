@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Lyric.API.Models;
 
 namespace Lyric.Data.Interfaces
@@ -17,5 +18,11 @@ namespace Lyric.Data.Interfaces
 		/// </summary>
 		/// <returns></returns>
 		string GetDataPath();
+
+		/// <summary>
+		/// Get a list of all artist average data
+		/// </summary>
+		/// <returns></returns>
+		Task<IEnumerable<ArtistAverage>> GetAllArtistsData();
 	}
 }
