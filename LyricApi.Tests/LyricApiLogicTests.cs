@@ -21,6 +21,7 @@ namespace LyricApi.Tests
 		private Mock<IMusicBrainzService> _musicBrainzService;
 		private Mock<ILyricCalculator> _lyricCalculator;
 		private Mock<ILyricDataReader> _lyricDataReader;
+		private Mock<ILyricDataManager> _lyricDataManager;
 
 		[SetUp]
 		public void Setup()
@@ -29,9 +30,10 @@ namespace LyricApi.Tests
 			_musicBrainzService = new Mock<IMusicBrainzService>();
 			_lyricCalculator = new Mock<ILyricCalculator>();
 			_lyricDataReader = new Mock<ILyricDataReader>();
+			_lyricDataManager = new Mock<ILyricDataManager>();
 
 			_lyricApiLogic = new LyricApiLogic(_musicBrainzService.Object, _lyricService.Object, _lyricCalculator.Object,
-				_lyricDataReader.Object);
+				_lyricDataReader.Object, _lyricDataManager.Object);
 		}
 
 		[Test]
@@ -102,7 +104,7 @@ namespace LyricApi.Tests
 		}
 
 		[Test]
-		public async Task GetAverageLyricCount_ReturnsAverageDetails_AndNotReturnFromJsonFile()
+		public async Task GetAverageLyricCount_ReturnsAverageDetails_AndNotReturnFromJsonFile_AndCallsAddArtistData()
 		{
 			// Arrange
 			var artist = new ArtistData
@@ -139,6 +141,8 @@ namespace LyricApi.Tests
 				.Returns(57);
 			_lyricCalculator.Setup(lc => lc.GetLyricCountAverageDetails(It.IsAny<List<int>>()))
 				.Returns(averageDetails);
+			_lyricDataManager.Setup(ldm => ldm.AddArtistData(It.IsAny<ArtistAverage>()))
+				.ReturnsAsync(true);
 
 			// Act
 			var result = await _lyricApiLogic.GetAverageLyricCount("Hadouken");
@@ -148,6 +152,8 @@ namespace LyricApi.Tests
 			Assert.AreEqual(averageDetails.Average, result.AverageDetails.Average);
 			Assert.AreEqual(averageDetails.MaxCount, result.AverageDetails.MaxCount);
 			Assert.AreEqual(averageDetails.MinCount, result.AverageDetails.MinCount);
+
+			_lyricDataManager.Verify(ldm => ldm.AddArtistData(It.IsAny<ArtistAverage>()), Times.Once);
 		}
 
 		[Test]

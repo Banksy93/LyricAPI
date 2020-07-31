@@ -15,14 +15,16 @@ namespace Lyric.API.Logic
 		private readonly ILyricService _lyricService;
 		private readonly ILyricCalculator _lyricCalculator;
 		private readonly ILyricDataReader _lyricDataReader;
+		private readonly ILyricDataManager _lyricDataManager;
 
 		public LyricApiLogic(IMusicBrainzService musicBrainzService, ILyricService lyricService, ILyricCalculator lyricCalculator,
-			ILyricDataReader lyricDataReader)
+			ILyricDataReader lyricDataReader, ILyricDataManager lyricDataManager)
 		{
 			_musicBrainzService = musicBrainzService;
 			_lyricService = lyricService;
 			_lyricCalculator = lyricCalculator;
 			_lyricDataReader = lyricDataReader;
+			_lyricDataManager = lyricDataManager;
 		}
 
 		public async Task<ArtistAverage> GetAverageLyricCount(string artist)
