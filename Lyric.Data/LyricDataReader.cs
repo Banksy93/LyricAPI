@@ -18,7 +18,7 @@ namespace Lyric.Data
 			if (data == null)
 				return new ArtistAverage();
 
-			return data.First(d => d.ArtistName == artist) ?? new ArtistAverage();
+			return data.FirstOrDefault(d => d.ArtistName == artist) ?? new ArtistAverage();
 		}
 
 		public string GetDataPath()

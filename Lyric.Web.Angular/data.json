@@ -1,3 +1,20 @@
-{
-
-}
+[
+  {
+    "ArtistId": "6fbd58c3-e9b3-4419-a197-0a0f22baed94",
+    "ArtistName": "The Ghost Inside",
+    "AverageDetails": {
+      "Average": 203.7111111111111,
+      "MaxCount": 377.0,
+      "MinCount": 1.0
+    }
+  },
+  {
+    "ArtistId": "24e58672-0956-4e3b-87a4-aaf3d52094aa",
+    "ArtistName": "While She Sleeps",
+    "AverageDetails": {
+      "Average": 295.3880597014925,
+      "MaxCount": 462.0,
+      "MinCount": 1.0
+    }
+  }
+]

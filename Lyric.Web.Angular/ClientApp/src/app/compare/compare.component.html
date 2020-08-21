@@ -4,10 +4,10 @@
 	<div>
 		<h5><strong>Compare the average lyric details of two artists</strong></h5>
 		<div class="input-group mb-3">
-			<input id="artist1" class="form-control" type="text" placeholder="Enter first artist..."/>
-			<input id="artist2" class="form-control" type="text" placeholder="Enter second artist..."/>
+			<input id="artist1" class="form-control" type="text" placeholder="Enter first artist..." [(ngModel)]="artistOne"/>
+			<input id="artist2" class="form-control" type="text" placeholder="Enter second artist..." [(ngModel)]="artistTwo"/>
 			<div class="input-group-append">
-				<button class="btn btn-primary">{{btnText}}</button>
+				<button class="btn btn-primary" (click)="compareArtistData()">{{btnText}}</button>
 			</div>
 		</div>
 	</div>

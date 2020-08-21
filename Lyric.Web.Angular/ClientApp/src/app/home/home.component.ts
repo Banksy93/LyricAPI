@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { ArtistAverage } from './../types/types';
+
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',

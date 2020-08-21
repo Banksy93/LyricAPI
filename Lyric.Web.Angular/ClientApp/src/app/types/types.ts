@@ -1,10 +1,10 @@
-interface ArtistAverage {
+export interface ArtistAverage {
 	artistId?: string;
 	artistName?: string;
 	averageDetails?: AverageDetails;
 }
 
-interface AverageDetails {
+export interface AverageDetails {
 	average?: number;
 	maxCount?: number;
 	minCount?: number;
